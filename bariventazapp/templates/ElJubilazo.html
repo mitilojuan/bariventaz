@@ -1,0 +1,31 @@
+<div style="display: flex; justify-content: center; justify-content: space-around;" class="flex-container" >
+
+{% for jubilazo in jubilazomarket %}
+<div class="card" style='text-align: center;'>
+  <img src="{{ jubilazo.image.url }}"   style="width: 110px; height: 100px;">
+  <h3 style='font-weight: bold;'>{{ jubilazo.name  }}</h3>
+  <div class="container" style="text-align: center;">
+  <h5>{{ jubilazo.item  }}</h5>
+  <h5>{{ jubilazo.price  }}</h5>
+
+  </div>
+</div>
+
+{% endfor  %}
+
+{% for jubilazo2 in jubilazomarket %}
+<div class="card" style='text-align: center;'>
+  <img src="{{ jubilazo2.image.url }}"   style="width: 110px; height: 100px;">
+  <h3 style='font-weight: bold;'>{{ jubilazo2.name  }}</h3>
+  <div class="container" style="text-align: center;">
+  <h5>{{ jubilazo2.item  }}</h5>
+  <h5>{{ jubilazo2.price  }}</h5>
+
+  </div>
+</div>
+{% endfor  %}
+
+
+
+
+</div><br><br>

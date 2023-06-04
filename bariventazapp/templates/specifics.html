@@ -1,0 +1,44 @@
+  {%  for result in results %}
+
+<div>
+    <a style='float: left;' href="{% url 'specifics' result.id %}" class="card-title" ><img class="card-img-top" src="{{ result.image.url }}" alt="Card image cap" style="width: 120px";></a>
+    <h3>{{result.name}}</h3>
+    {{result.item}}<br><br>
+    {{result.price}}<br>
+
+</div><br>
+
+<hr>
+
+{% endfor %}
+
+{% for specific in specifics %}
+
+   <a href="{% url 'details2' specific.id %}" > <img class="card-img-top" src="{{ specific.image.url }}" alt="Card image cap" style="width: 160px";></a>
+    <h3>{{ specific.name}}</h3>
+    {{ specific.item}}<br><br>
+    {{ specific.price}}<br><br>
+<form >
+       <div class="aligned">
+
+        <button ><a href="https://wa.me/message/DEZBN5JWBPMFL1" style="text-decoration: none;">Contactar Administrador</a></button>
+        <img src='/media/logow.png'
+            width="40" >
+
+    </div>
+      </form>
+{% endfor %}
+
+<a href="{% url 'products' %}" style="text-decoration: none;">Volver al inicio</a>
+
+<style>
+        .aligned {
+            display: flex;
+            align-items: center;
+        }
+
+        button {
+            padding: 5px;
+            font-size: 15px;
+        }
+    </style>
